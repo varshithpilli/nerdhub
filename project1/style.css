@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(249, 250, 251);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.calendar-container {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-icon {
+    color: black;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(31, 41, 55);
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: rgb(243, 244, 246);
+    border-radius: 0.5rem;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: rgb(107, 114, 128);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+}
+
+.nav-button:hover {
+    background-color: rgb(229, 231, 235);
+    color: rgb(31, 41, 55);
+}
+
+#currentMonth {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(31, 41, 55);
+}
+
+.calendar {
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: rgb(243, 244, 246);
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.weekdays div {
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(107, 114, 128);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid rgb(229, 231, 235);
+    cursor: pointer;
+    min-height: 5rem;
+    transition: all 0.2s;
+}
+
+.day:hover {
+    background-color: rgb(243, 244, 246);
+}
+
+.day.today {
+    background-color: rgb(239, 246, 255);
+    font-weight: 600;
+    color: brown;
+}
+
+.day.selected {
+    background-color: rgb(118, 118, 118);
+    color: white;
+}
+
+.day.other-month {
+    color: rgb(156, 163, 175);
+    background-color: rgb(249, 250, 251);
+}
+
+.day.has-events::after {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0.25rem auto 0;
+}
+
+.day.selected.has-events::after {
+    background-color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 32rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: rgb(107, 114, 128);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: rgb(31, 41, 55);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(55, 65, 81);
+    margin-bottom: 0.25rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.375rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+input:focus, textarea:focus {
+    border-color: black;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-button:hover {
+    background-color: black;
+}
+
+.events-container {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+}
+
+.events-container h2 {
+    margin-bottom: 1rem;
+    color: rgb(31, 41, 55);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.event-card {
+    background-color: rgb(243, 244, 246);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgb(31, 41, 55);
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: rgb(239, 68, 68);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.delete-button:hover {
+    color: rgb(185, 28, 28);
+}
+
+.event-description {
+    color: rgb(75, 85, 99);
+    margin-bottom: 0.5rem;
+}
+
+.event-datetime {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(107, 114, 128);
+    margin-bottom: 0.5rem;
+}
+
+.countdown {
+    background-color: rgb(239, 246, 255);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+}
+
+.countdown p {
+    color: black;
+    font-weight: 500;
+}
