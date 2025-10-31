@@ -1,4 +1,5 @@
-import { Card, CardHeader, CardTitle, CardDescription } from "./ui/card"
+import { CardHeader, CardTitle, CardDescription } from "./ui/card"
+import SpotlightCard from '../components/SpotlightCard';
 
 interface ProjectCardProps {
   name: string
@@ -8,20 +9,22 @@ interface ProjectCardProps {
 
 export function ProjectCard({ name, description, path }: ProjectCardProps) {
   return (
-    <a href={`https://varzone.in/${path}`} target="_blank" rel="noopener noreferrer">
-    <Card className="w-full transition-all duration-300 
-      hover:bg-zinc-800/50 bg-zinc-900 
-      border-zinc-800 hover:border-zinc-700
-      cursor-pointer group rounded-[4px]">
-      <CardHeader>
-        <CardTitle className="text-xl sm:text-2xl text-white group-hover:text-gray-200">
-          {name}
-        </CardTitle>
-        <CardDescription className="text-gray-400 group-hover:text-gray-300">
-          {description}
-        </CardDescription>
-      </CardHeader>
-    </Card>
-    </a>
+
+<SpotlightCard
+  className="custom-spotlight-card rounded-sm bg-[#0F0F0F] cursor-target"
+  spotlightColor="rgba(25, 25, 25, 1)"
+>
+  <a href={`${path}`} target="_blank" rel="noopener noreferrer" className="cursor-none">
+    <CardHeader>
+      <CardTitle className="text-xl sm:text-2xl text-white group-hover:text-gray-200 asset-regular">
+        {name}
+      </CardTitle>
+      <CardDescription className="text-gray-400 group-hover:text-gray-300 playfair-display">
+        {description}
+      </CardDescription>
+    </CardHeader>
+  </a>
+</SpotlightCard>
+
   )
 }

@@ -1,7 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.notable-regular {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fleur-de-leah-regular {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.asset-regular {
+  font-family: "Asset", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -117,4 +146,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
