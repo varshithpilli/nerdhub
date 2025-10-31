@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ name, description, path }: ProjectCardProps) {
   return (
-    <a href={`/${path}/index.html`} target="_blank" rel="noopener noreferrer">
+    <a href={`https://varzone.in/${path}`} target="_blank" rel="noopener noreferrer">
     <Card className="w-full transition-all duration-300 
       hover:bg-zinc-800/50 bg-zinc-900 
       border-zinc-800 hover:border-zinc-700

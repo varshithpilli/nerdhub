@@ -4,17 +4,17 @@ import { ProjectCard } from "./components/ProjectCard"
 const projects = [
   {
     name: "Calender Events",
-    path: "project1",
+    path: "calendar-events/",
     description: "A simple HTML + CSS calender with event managing."
   },
   {
     name: "Notes App",
-    path: "project2",
+    path: "notes-app/",
     description: "A small React attempt to make a note taking app."
   },
   {
     name: "Quiz App",
-    path: "project3",
+    path: "quiz-app/",
     description: "A simple HTML + CSS static quiz app."
   },
 ]
