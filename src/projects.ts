@@ -10,6 +10,11 @@ export const projects = [
         description: "Tried cuz of 3b1b."
     },
     {
+        name: "Lin-alg",
+        path: "https://varzone.in/Lin-Alg/",
+        description: "Made it to increase quiz marks."
+    },
+    {
         name: "Calender",
         path: "https://varzone.in/calendar-events/",
         description: "A simple HTML + CSS calender with event managing."
