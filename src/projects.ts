@@ -1,5 +1,10 @@
 export const projects = [
     {
+        name: "Lazy for Captcha",
+        path: "https://github.com/varshithpilli/vitcc-captcha-solver",
+        description: "Solves vtopcc and vtopregcc captchas."
+    },
+    {
         name: "Ventoy",
         path: "https://github.com/varshithpilli/ventoy-theme",
         description: "A custom ventoy theme I use."
