@@ -1,8 +1,8 @@
 export const projects = [
     {
-        name: "Lazy for Captcha",
-        path: "https://github.com/varshithpilli/vitcc-captcha-solver",
-        description: "Solves vtopcc and vtopregcc captchas."
+        name: "Lazy VITC",
+        path: "https://github.com/varshithpilli/lazy-vitc",
+        description: "Promoting laziness in VITC."
     },
     {
         name: "Ventoy",
