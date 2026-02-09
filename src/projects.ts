@@ -5,6 +5,11 @@ export const projects = [
         description: "Promoting laziness in VITC."
     },
     {
+        name: "WatchPuppy",
+        path: "https://github.com/varshithpilli/watchpuppy",
+        description: "To handle some of the fuckedup-ness of Vtop data changes."
+    },
+    {
         name: "Ventoy",
         path: "https://github.com/varshithpilli/ventoy-theme",
         description: "A custom ventoy theme I use."
