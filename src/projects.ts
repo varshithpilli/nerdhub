@@ -5,8 +5,8 @@ export const projects = [
         description: "Promoting laziness in VITC."
     },
     {
-        name: "WatchPuppy",
-        path: "https://github.com/varshithpilli/watchpuppy",
+        name: "WatchPup",
+        path: "https://github.com/varshithpilli/watchpup",
         description: "To handle some of the fuckedup-ness of Vtop data changes."
     },
     {
