@@ -44,9 +44,9 @@ export const projects = [
     //     path: "https://varzone.in/quiz-app/",
     //     description: "A simple HTML + CSS static quiz app."
     // },
-    {
-        name: "Breach",
-        path: "https://github.com/varshithpilli/breached-data",
-        description: "You know exactly what it is."
-    },
+    // {
+    //     name: "Breach",
+    //     path: "https://github.com/varshithpilli/breached-data",
+    //     description: "You know exactly what it is."
+    // },
 ]
