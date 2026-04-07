@@ -1,15 +1,5 @@
 export const projects = [
     {
-        name: "Lazy VITC",
-        path: "https://github.com/varshithpilli/lazy-vitc",
-        description: "Promoting laziness in VITC."
-    },
-    {
-        name: "WatchPup",
-        path: "https://github.com/varshithpilli/watchpup",
-        description: "To handle some of the fuckedup-ness of Vtop data changes."
-    },
-    {
         name: "Ventoy",
         path: "https://github.com/varshithpilli/ventoy-theme",
         description: "A custom ventoy theme I use."
